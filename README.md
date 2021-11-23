@@ -1,7 +1,18 @@
+[![Latest Stable Version](http://poser.pugx.org/nsp-team/qywx-tool/v)](https://packagist.org/packages/nsp-team/qywx-tool) 
+[![Total Downloads](http://poser.pugx.org/nsp-team/qywx-tool/downloads)](https://packagist.org/packages/nsp-team/qywx-tool) 
+[![Latest Unstable Version](http://poser.pugx.org/nsp-team/qywx-tool/v/unstable)](https://packagist.org/packages/nsp-team/qywx-tool) 
+[![License](http://poser.pugx.org/nsp-team/qywx-tool/license)](https://packagist.org/packages/nsp-team/qywx-tool)
+[![PHP Version Require](http://poser.pugx.org/nsp-team/qywx-tool/require/php)](https://packagist.org/packages/nsp-team/qywx-tool)
 # qywx-tool
-企业微信工具库
+企业微信工具库, 方便日常开发使用的企业微信服务api封装库
+
+这个库需要PHP7.3以上版本
+
+## Install
+> composer require nsp-team/qywx-tool
 
 
+## Sample Usage
 
 ```injectablephp
 use NspTeam\WeiWork\CorpAPI;
