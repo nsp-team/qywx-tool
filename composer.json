@@ -1,0 +1,25 @@
+{
+    "name": "mxp/qywx-tool",
+    "description": "企业网微信工具包",
+    "type": "library",
+    "license": "Apache-2.0 License",
+    "authors": [
+        {
+            "name": "maoxp",
+            "email": "maoxingpei8686@163.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.3",
+      "ext-json": "*",
+      "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "NspTeam\\WeiWork\\" : "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    }
+}
