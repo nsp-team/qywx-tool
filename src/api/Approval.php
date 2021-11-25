@@ -9,6 +9,7 @@ trait Approval
     /**
      * 获取审批模板详情
      * @param string $template_id 模板的唯一标识id
+     * @throws ParameterError
      * @throws \Exception
      */
     public function getApprovalTemplateData(string $template_id): array
@@ -21,6 +22,28 @@ trait Approval
         $real_url = str_replace("ACCESS_TOKEN", $this->access_token, $url);
         $body = [
             'template_id' => $template_id
+        ];
+
+        return post_method($real_url, $body, ["Content-type" => "application/json"]);
+    }
+
+    /**
+     * 获取审批申请详情
+     * @param string $sp_no
+     * @return array
+     * @throws ParameterError
+     * @throws \Exception
+     */
+    public function getApprovalDetail(string $sp_no): array
+    {
+        if ($this->access_token === null) {
+            throw new ParameterError('access_token参数为空');
+        }
+
+        $url = self::DOMAIN . self::GET_APPROVAL_DETAIL;
+        $real_url = str_replace("ACCESS_TOKEN", $this->access_token, $url);
+        $body = [
+            'sp_no' => $sp_no
         ];
 
         return post_method($real_url, $body, ["Content-type" => "application/json"]);
