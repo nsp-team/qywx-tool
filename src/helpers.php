@@ -1,5 +1,7 @@
 <?php
 
+use NspTeam\WeiWork\callback\ErrorCode;
+
 
 /**
  * 用SHA1算法生成安全签名
@@ -7,19 +9,19 @@
  * @param int $timestamp 时间戳
  * @param string $nonce 随机字符串
  * @param string $encrypt_msg 密文消息
- * @return string|null
+ * @return array
  */
-function getSHA1(string $token, int $timestamp, string $nonce, string $encrypt_msg): ?string
+function getSHA1(string $token, int $timestamp, string $nonce, string $encrypt_msg): array
 {
     try {
         $array = array($encrypt_msg, $token, $timestamp, $nonce);
         //sort的含义是将参数值按照字母字典排序，然后从小到大拼接成一个字符串
         sort($array, SORT_STRING);
         $str = implode('', $array);
-        return sha1($str);
+        return array(ErrorCode::OK, sha1($str));
     } catch (Exception $e) {
         print $e . "\n";
-        return null;
+        return array(ErrorCode::ComputeSignatureError, null);
     }
 }
 
