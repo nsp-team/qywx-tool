@@ -6,7 +6,6 @@ use NspTeam\WeiWork\exception\ParameterError;
 
 trait Approval
 {
-
     /**
      * 获取审批模板详情
      * @param string $template_id 模板的唯一标识id
@@ -17,13 +16,14 @@ trait Approval
         if ($this->access_token === null) {
             throw new ParameterError('access_token参数为空');
         }
+
         $url = self::DOMAIN . self::GET_APPROVAL_DETAIL;
         $real_url = str_replace("ACCESS_TOKEN", $this->access_token, $url);
         $body = [
             'template_id' => $template_id
         ];
-        $header = ["Content-type" => "application/json"];
-        return post_method($real_url, $body, $header);
+
+        return post_method($real_url, $body, ["Content-type" => "application/json"]);
     }
 
     /**
@@ -61,8 +61,6 @@ trait Approval
                 )
             );
         }
-
-        var_dump($summary_list);
 
         $url = self::DOMAIN . self::SUBJECT_APPROVAL;
         $real_url = str_replace("ACCESS_TOKEN", $this->access_token, $url);
