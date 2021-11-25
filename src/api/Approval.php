@@ -18,7 +18,7 @@ trait Approval
             throw new ParameterError('access_token参数为空');
         }
 
-        $url = self::DOMAIN . self::GET_APPROVAL_DETAIL;
+        $url = self::DOMAIN . self::GET_TEMPLATE_DETAIL;
         $real_url = str_replace("ACCESS_TOKEN", $this->access_token, $url);
         $body = [
             'template_id' => $template_id

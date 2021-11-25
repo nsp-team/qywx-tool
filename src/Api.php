@@ -51,8 +51,8 @@ interface Api
     public const GET_JSAPI_TICKET = '/cgi-bin/get_jsapi_ticket?access_token=ACCESS_TOKEN';
 
     public const GET_CHECKIN_OPTION = '/cgi-bin/checkin/getcheckinoption?access_token=ACCESS_TOKEN';
-    public const GET_CHECKIN_DATA = '/cgi-bin/checkin/getcheckindata?access_token=ACCESS_TOKEN';
-    public const GET_APPROVAL_DETAIL = '/cgi-bin/oa/gettemplatedetail?access_token=ACCESS_TOKEN';
+    public const GET_TEMPLATE_DETAIL = '/cgi-bin/oa/gettemplatedetail?access_token=ACCESS_TOKEN';
+    public const GET_APPROVAL_DETAIL = '/cgi-bin/oa/getapprovaldetail?access_token=ACCESS_TOKEN';
     public const SUBJECT_APPROVAL = '/cgi-bin/oa/applyevent?access_token=ACCESS_TOKEN';
 
     public const GET_INVOICE_INFO = '/cgi-bin/card/invoice/reimburse/getinvoiceinfo?access_token=ACCESS_TOKEN';
