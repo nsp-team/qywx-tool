@@ -1,32 +1,35 @@
 {
-    "name": "nsp-team/qywx-tool",
-    "description": "企业微信工具包",
-    "type": "library",
-    "license": "Apache-2.0",
-    "authors": [
-        {
-            "name": "maoxp",
-            "email": "maoxingpei8686@163.com"
-        }
-    ],
-    "minimum-stability": "stable",
-    "keywords": [
-        "企业微信",
-        "webman"
-    ],
-    "require": {
-        "php": ">=7.3.0",
-      "ext-json": "*",
-      "ext-curl": "*",
-      "ext-openssl": "*",
-      "ext-dom": "*"
-    },
-    "autoload": {
-        "psr-4": {
-            "NspTeam\\WeiWork\\" : "src/"
-        },
-        "files": [
-            "src/helpers.php"
-        ]
+  "name": "nsp-team/qywx-tool",
+  "description": "企业微信工具包",
+  "type": "library",
+  "license": "Apache-2.0",
+  "keywords": [
+    "企业微信",
+    "webman",
+    "weixin",
+    "qiyeweixin",
+    "sdk"
+  ],
+  "authors": [
+    {
+      "name": "maoxp",
+      "email": "maoxingpei8686@163.com"
     }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=7.3.0",
+    "ext-json": "*",
+    "ext-curl": "*",
+    "ext-openssl": "*",
+    "ext-dom": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "NspTeam\\WeiWork\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  }
 }
