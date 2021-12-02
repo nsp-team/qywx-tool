@@ -2,16 +2,19 @@
 
 namespace NspTeam\WeiWork;
 
-use NspTeam\WeiWork\api\Approval;
-use NspTeam\WeiWork\api\Message;
-use NspTeam\WeiWork\exception\ParameterError;
-use NspTeam\WeiWork\exception\QyApiError;
+use NspTeam\WeiWork\Api\Approval;
+use NspTeam\WeiWork\Api\JsapiTicket;
+use NspTeam\WeiWork\Api\Message;
+use NspTeam\WeiWork\Exception\ParameterError;
+use NspTeam\WeiWork\Exception\QyApiError;
 
 class CorpAPI implements Api
 {
     use Approval;
 
     use Message;
+
+    use JsapiTicket;
 
     /**
      * 企业微信应用密钥
@@ -88,20 +91,5 @@ class CorpAPI implements Api
             }
             $this->access_token = $raw_array['access_token'];
         }
-    }
-
-    /**
-     * JsApiSignatureGet : 计算jsapi的签名
-     * @link https://work.weixin.qq.com/api/doc#10029/%E7%AD%BE%E5%90%8D%E7%AE%97%E6%B3%95
-     * @param string $jsapiTicket
-     * @param string $nonceStr
-     * @param string $timestamp
-     * @param string $url
-     * @return string
-     */
-    public function jsApiSignatureGet(string $jsapiTicket, string $nonceStr, string $timestamp, string $url): string
-    {
-        $string = "jsapi_ticket=$jsapiTicket&noncestr=$nonceStr&timestamp=$timestamp&url=$url";
-        return sha1($string);
     }
 }

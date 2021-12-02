@@ -1,6 +1,6 @@
 <?php
 
-namespace NspTeam\WeiWork\api;
+namespace NspTeam\WeiWork\Api;
 
 use ParseError;
 

@@ -6,14 +6,19 @@ require_once "../vendor/autoload.php";
 
 $template_id = '3WK7KC6itNzq4h8bXusv52JodxUUWwDSa7kUPugG';
 $corpAPI = new CorpAPI('ww63cb313218abe8d6', '5zuqiATsOUNNujNqZ1hGo6K-FcB1boSajaconRDVMcI', '3010040');
-//$accessToken = $corpAPI->getAccessToken();
-//var_dump($accessToken);
-$corpAPI->access_token = 'zgjxz47u3RTG1OP0s_zyT_Nen9Ol98eYJlYCB2QTyoiCgnYvhnYHNV3nWOODLTT0K6bMCn10O3rhBZgm44pbiCLqXum-THTz2ShudGTnSjnVqIJyvDhDfDTFFQGZNE3gR0yvJgaVUJw2g6ONkgibEjUgaEbQS_8wyNFAN4dHpJmPNHboHscB2s7H_Z_-PmZCQFEuMYXXtVv92AFkwvOA2Q';
+$corpAPI->getAccessToken();
+
+$ticket = $corpAPI->getTicket(false);
+echo $ticket."\n";
+
+$jsApiSignatureGet = $corpAPI->jsApiSignatureGet($ticket, md5(time()), time(), "https://www.baidu.com");
+echo $jsApiSignatureGet."\n";
+//$corpAPI->access_token = 'zgjxz47u3RTG1OP0s_zyT_Nen9Ol98eYJlYCB2QTyoiCgnYvhnYHNV3nWOODLTT0K6bMCn10O3rhBZgm44pbiCLqXum-THTz2ShudGTnSjnVqIJyvDhDfDTFFQGZNE3gR0yvJgaVUJw2g6ONkgibEjUgaEbQS_8wyNFAN4dHpJmPNHboHscB2s7H_Z_-PmZCQFEuMYXXtVv92AFkwvOA2Q';
 
 
-$templateData = $corpAPI->getApprovalTemplateData($template_id);
-var_dump($templateData);
-var_dump($templateData['body']);
+//$templateData = $corpAPI->getApprovalTemplateData($template_id);
+//var_dump($templateData);
+//var_dump($templateData['body']);
 
 
 //

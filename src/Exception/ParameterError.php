@@ -1,10 +1,10 @@
 <?php
 
-namespace NspTeam\WeiWork\exception;
+namespace NspTeam\WeiWork\Exception;
 
 use Exception;
 
-class NetWorkError extends Exception
+class ParameterError extends Exception
 {
     public function __construct($message, $code = 0, Exception $previous = null)
     {

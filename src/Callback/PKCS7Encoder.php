@@ -1,6 +1,6 @@
 <?php
 
-namespace NspTeam\WeiWork\callback;
+namespace NspTeam\WeiWork\Callback;
 
 /**
  * PKCS7Encoder

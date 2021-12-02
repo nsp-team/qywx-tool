@@ -2,9 +2,9 @@
 
 namespace NspTeam\WeiWork;
 
-use NspTeam\WeiWork\callback\ErrorCode;
-use NspTeam\WeiWork\callback\Crypt;
-use NspTeam\WeiWork\callback\XMLParse;
+use NspTeam\WeiWork\Callback\ErrorCode;
+use NspTeam\WeiWork\Callback\Crypt;
+use NspTeam\WeiWork\Callback\XMLParse;
 
 /**
  * @see https://work.weixin.qq.com/api/doc/10514

@@ -1,8 +1,8 @@
 <?php
 
-namespace NspTeam\WeiWork\api;
+namespace NspTeam\WeiWork\Api;
 
-use NspTeam\WeiWork\exception\ParameterError;
+use NspTeam\WeiWork\Exception\ParameterError;
 
 trait Approval
 {

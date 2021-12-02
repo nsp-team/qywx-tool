@@ -1,6 +1,6 @@
 <?php
 
-namespace NspTeam\WeiWork\exception;
+namespace NspTeam\WeiWork\Exception;
 
 use Exception;
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace NspTeam\WeiWork\exception;
+namespace NspTeam\WeiWork\Exception;
 
 use Exception;
 
-class SysError extends Exception
+class HttpError extends Exception
 {
     public function __construct($message, $code = 0, Exception $previous = null)
     {

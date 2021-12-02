@@ -1,6 +1,6 @@
 <?php
 
-use NspTeam\WeiWork\callback\ErrorCode;
+use NspTeam\WeiWork\Callback\ErrorCode;
 
 
 /**
