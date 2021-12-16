@@ -47,7 +47,7 @@ interface Api
     public const GET_USER_INFO_BY_CODE = '/cgi-bin/user/getuserinfo?access_token=ACCESS_TOKEN';
     public const GET_USER_DETAIL = '/cgi-bin/user/getuserdetail?access_token=ACCESS_TOKEN';
 
-    public const GET_AGENT_TICKET = '/cgi-bin/ticket/get?access_token=ACCESS_TOKEN&type=AGENT_CONFIG';
+    public const GET_AGENT_TICKET = '/cgi-bin/ticket/get?access_token=ACCESS_TOKEN&type=agent_config';
     public const GET_JSAPI_TICKET = '/cgi-bin/get_jsapi_ticket?access_token=ACCESS_TOKEN';
 
     public const GET_CHECKIN_OPTION = '/cgi-bin/checkin/getcheckinoption?access_token=ACCESS_TOKEN';

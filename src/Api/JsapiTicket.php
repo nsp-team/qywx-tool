@@ -40,11 +40,10 @@ trait JsapiTicket
 
         if ($needAgentId && !empty($this->agentId)) {
             $url = self::DOMAIN . self::GET_AGENT_TICKET;
-            $real_url = str_replace(['ACCESS_TOKEN', 'AGENT_CONFIG'], [$this->access_token, $this->agentId], $url);
         } else {
             $url = self::DOMAIN . self::GET_JSAPI_TICKET;
-            $real_url = str_replace("ACCESS_TOKEN", $this->access_token, $url);
         }
+        $real_url = str_replace("ACCESS_TOKEN", $this->access_token, $url);
 
         $response = get_method($real_url);
         if (!empty($response['body'])) {
